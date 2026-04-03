@@ -27,9 +27,7 @@ Phần mềm sẽ tiếp tục việc giải lập trình C++, sinh mọi dữ l
 Toàn bộ dự án này được viết ra để phục vụ cho sự nghiệp giáo dục, giúp các giáo viên bộ môn và các bạn học sinh chuyên bớt đi gánh nặng của hàng chục giờ sinh test đầy gian khổ. Nếu tiện ích nhỏ bé này đã cất đi gánh nặng lớn của bạn, mong bạn hãy mời tôi một tách trà nhẹ nhàng nhé! ☕
 
 - **Ngân Hàng / Ví Điện Tử:** 
-  - Ngân hàng: `(Tên Ngân Hàng)` - Số TK: `(Số tài khoản của bạn)` - Chủ TK: `(Tên bạn)`
-  - MoMo: `(Số điện thoại MoMo)`
-- **Buy me a coffee:** [Buymeacoffee.com/củabạn](#)
+  - Ngân hàng: `(MB Bank)` - Số TK: `(0357794112)` - Chủ TK: `(Ngo Viet Tinh)`
 
 *Những đóng góp chân tình sẽ đảm bảo rằng ứng dụng này không những sống hiên ngang mà còn liên tục được trang bị các tính năng vô giá ở những phiên bản trong tương lai. Cảm ơn bạn!* 😊
 
