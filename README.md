@@ -33,5 +33,5 @@ Toàn bộ dự án này được viết ra để phục vụ cho sự nghiệp 
 
 ---
 <div align="center">
-  <i>Được làm bằng 💻 và ❤️ bởi cộng đồng giáo dục lập trình Việt Nam.</i>
+  <i>Được làm bằng 💻 và ❤️.</i>
 </div>
