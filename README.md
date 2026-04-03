@@ -8,12 +8,12 @@
 
 ### 🤖 1. Phân tích & Sinh Test bằng AI (Sinh Test Tab)
 - **Hỗ trợ Ảnh & Clipboard**: Chỉ cần chụp ảnh đề bài (Win+Shift+S) và nhấn `Ctrl+V` để nạp vào phần mềm.
-- **AI Đỉnh cao (Gemini 1.5 Flash)**: Tự động phân tích logic, giới hạn bài toán và sinh code giải chuẩn xác.
+- **AI Đỉnh cao **: Tự động phân tích logic, giới hạn bài toán và sinh code giải chuẩn xác.
 - **Tự động sinh Test Data**: Tạo bộ dữ liệu đầu vào `.in` và đầu ra `.out` phong phú, bao gồm cả các trường hợp biên (edge cases).
 - **Cơ chế Retry thông minh**: Tự động thử lại khi gặp lỗi giới hạn API (Quota 429), giúp quá trình sinh không bị gián đoạn.
 
 ### 🌐 2. Tự động hóa Upload OJ (OJ & Đăng Bài Tab)
-- **Kết nối Trực tiếp ptcoding.edu.vn**: Tự động Đăng nhập -> Tạo bài mới -> Upload ZIP -> Ghép cặp (Apply).
+- **Kết nối Trực tiếp ptcoding.edu.vn (Hoặc các DMOJ khác)**: Tự động Đăng nhập -> Tạo bài mới -> Upload ZIP -> Ghép cặp (Apply). Hiện tại chỉ hoạt động tốt nhất với ptcoding.
 - **Phát hiện Ghi đè**: Tự động kiểm tra nếu bài đã tồn tại và hỏi ý kiến người dùng trước khi cập nhật.
 - **Tối ưu hóa Giao diện OJ**: 
   - Nếu AI sinh ra mô tả văn bản, chương trình tự động xóa tệp đề bài cũ (ảnh/PDF) để tránh trùng lặp.
@@ -29,16 +29,13 @@
 
 ## 🚀 Hướng dẫn Sử dụng (Quick Start)
 
-### 1. Cài đặt ban đầu
-- Tải bản phát hành tại thư mục `AICodeGen_Release/`.
-- Chạy file `AICodeGen.exe`.
-- Trong lần đầu sử dụng, phần mềm sẽ yêu cầu nhập **Gemini API Key** (Sẽ được lưu an toàn tại `~/.ai_cp_config.json`).
-
-### 2. Quy trình làm việc 3 bước
-1.  **Dán ảnh**: Chụp ảnh đề bài -> Nhấn `Ctrl+V` vào phần mềm.
-2.  **Sinh dữ liệu**: Nhấn **"Bắt đầu Sinh"**. Đợi AI hoàn tất code và test cases.
-3.  **Đăng bài**: Chọn "Có" khi được hỏi nộp bài lên OJ. Kiểm tra thông tin tại Tab 2 và nhấn **"ĐĂNG BÀI LÊN OJ"**.
-
+### Cài đặt ban đầu
+1. Đi tới mục [**Releases**](https://github.com/) của kho lưu trữ này và tải xuống tệp `AICodeGen_Release.zip` mới nhất.
+2. Giải nén thư mục, click đúp vào file `AICodeGen.exe` để khởi chạy ứng dụng.
+3. Trong lần đầu sử dụng, phần mềm sẽ yêu cầu nhập **Gemini API Key** (Sẽ được lưu an toàn tại `~/.ai_cp_config.json`).
+   - Truy cập trang chủ [Google AI Studio](https://aistudio.google.com/app/apikey) để tạo API Key của bạn (Hoàn toàn miễn phí 100%).
+   - Sao chép dòng mã bí mật đó và dán vào ứng dụng, AICodeGen sẽ cất chìa khóa an toàn vào ổ cứng để các lần sau không cần nhờ bạn nữa.
+5. Gõ mã bài thi, chụp ảnh đề đưa vào, và uống nước để thư giãn!
 ---
 
 ## 📂 Cấu trúc Thư mục Kết quả
@@ -51,16 +48,7 @@ Khi thực hiện sinh bài, kết quả được lưu tại:
 ## ⚠️ Lưu ý
 - Đảm bảo tài khoản OJ có quyền tạo/chỉnh sửa bài toán.
 - Kiểm tra lại định dạng file `Time/Memory Limit` cho đúng với yêu cầu của từng trang OJ cụ thể.
-
-## 📥 Hướng Dẫn Cài Đặt (Dành cho Người Dùng Phổ Thông)
-
-1. Đi tới mục [**Releases**](https://github.com/) của kho lưu trữ này và tải xuống tệp `AICodeGen_Release.zip` mới nhất.
-2. Giải nén thư mục, click đúp vào file `AICodeGen.exe` để khởi chạy ứng dụng.
-3. Ở lần đầu khởi chạy, ứng dụng sẽ yêu cầu một mã đặc biệt tên là **Gemini API Key**.
-   - Truy cập trang chủ [Google AI Studio](https://aistudio.google.com/app/apikey) để tạo API Key của bạn (Hoàn toàn miễn phí 100%).
-   - Sao chép dòng mã bí mật đó và dán vào ứng dụng, AICodeGen sẽ cất chìa khóa an toàn vào ổ cứng để các lần sau không cần nhờ bạn nữa.
-4. Gõ mã bài thi, chụp ảnh đề đưa vào, và uống nước để thư giãn!
-
+  
 ## 💖 Ủng Hộ (Donate)
 Toàn bộ dự án này được viết ra để phục vụ cho sự nghiệp giáo dục, giúp các giáo viên bộ môn và các bạn học sinh chuyên bớt đi gánh nặng của hàng chục giờ sinh test đầy gian khổ. Nếu tiện ích nhỏ bé này đã cất đi gánh nặng lớn của bạn, mong bạn hãy mời tôi một tách trà nhẹ nhàng nhé! ☕
 
