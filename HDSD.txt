@@ -1,0 +1,24 @@
+=========================================================
+HƯỚNG DẪN SỬ DỤNG PHẦN MỀM AI TẠO TEST CASE (AICodeGen)
+=========================================================
+
+1. YÊU CẦU BAN ĐẦU
+- Ứng dụng này là file thực thi độc lập (.exe), bạn không cần phải cài đặt Python hay bất kỳ phần mềm lập trình nào.
+- Chỉ cần chạy trên máy tính Windows.
+- Khi chạy LẦN ĐẦU TIÊN, phần mềm sẽ yêu cầu bạn nhập "GEMINI API KEY". Sau khi nhập thành công, dòng mã này sẽ được lưu an toàn tại máy của bạn và các lần sau phần mềm sẽ không đòi nữa.
+
+2. CÁCH LẤY GEMINI API KEY (Miễn phí)
+- Truy cập: https://aistudio.google.com/app/apikey (Đăng nhập bằng tài khoản Google).
+- Chọn nút "Create API key" để tạo một dãy mã định danh cho riêng bạn và ấn Copy.
+
+3. SỬ DỤNG PHẦN MỀM
+Bước 1: Click đúp vào file `AICodeGen.exe` để chạy chương trình.
+Bước 2: (Lần đầu) Paste mã API Key vừa tạo vào cửa sổ đen khi phần mềm hỏi, sau đó ấn Enter.
+Bước 3: Gõ Tên bài toán (ID, ví dụ: bai1) và ấn Enter.
+Bước 4: Nhập thư mục xuất bộ Test (bạn có thể bấm Enter để sử dụng mặc định là lưu cùng thư mục với bài toán).
+Bước 5: Cung cấp Đề Bài bằng cách chụp ảnh. Hãy mở ảnh đề bài -> ấn phím Windows + Shift + S kéo vùng đề bài (để nó Copy vào clipboard). Sau đó quay lại phần mềm và gõ Enter.
+Bước 6: Khi hỏi "Thêm ảnh nữa", gõ "y" nếu đề có 2 ảnh, còn không gõ "n" rồi Enter.
+Bước 7: Bạn có thế điền đường dẫn Text bổ sung hoặc dẫn code C++ mẫu, mọi thứ đều tùy chọn (chỉ cần Enter để bỏ qua, AI sẽ tự viết Solution).
+
+4. KẾT QUẢ ĐẦU RA
+Phần mềm sẽ sử dụng AI để tự động suy nghĩ, xây dựng thư mục test và tính toán giới hạn điểm cho đúng tỷ lệ theo đề, cuối cùng đóng gói vào file nén `.zip` chứa mọi test cases. Bạn có thể chép bộ test .zip này lên Themis/CMS ngay lập tức.
