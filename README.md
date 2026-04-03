@@ -1,18 +1,56 @@
-<div align="center">
-  <h1>🚀 AICodeGen - Trợ Thủ AI Tự Động Đầu Tiên Cho Thầy Cô</h1>
-  <p><strong>Công cụ độc lập tự động khởi tạo Test Case và Code cho Competitive Programming bằng trí tuệ nhân tạo Gemini.</strong></p>
-</div>
+# 🚀 AICodeGen 2.0 - Trợ lý Tự động hóa Lập trình Thi đấu (Competitive Programming)
 
-<br>
+**AICodeGen 2.0** là công cụ GUI mạnh mẽ trên Windows, giúp tự động hóa toàn bộ quy trình: từ phân tích đề bài (ảnh/chữ) bằng AI, sinh mã nguồn lời giải, tạo bộ test case địa phương, cho đến việc tự động đăng bài lên Online Judge (OJ).
 
-## 🌟 Giới Thiệu
-Chỉ với thao tác **chụp đoạn văn đề bài (Ctrl+Shift+S)**, AICodeGen sẽ lập tức nhận diện bài toán, bóc tách các Subtask, xác định giới hạn biến và phân bổ tỷ lệ test case tự động một cách chuẩn xác nất. 
-Phần mềm sẽ tiếp tục việc giải lập trình C++, sinh mọi dữ liệu vào tệp tin `.inp` và `.out`, và ở bước chốt chặn cuối cùng: gói mọi thứ vào một tệp tin `.zip` sẵn sàng upload đi Themis, CMS. Tất cả chỉ trong 1 nốt nhạc!
+---
 
-## ⚡ Các Tính Năng Nổi Bật
-- **Hỗ Trợ Hình Ảnh Đa Phương:** Đọc thẳng đề bài từ bức ảnh đang chứa trong clipboard của máy (Hỗ trợ nhồi nhiều ảnh một lúc).
-- **Phân Mảnh Subtask Nâng Cao:** Tự nhận dạng bài thi chia điểm và chia tỷ trọng số test khớp đến từng mi-li-mét so với luật chấm của đề ra.
-- **Tiêu Trừ Thao Tác Cài Đặt:** Chương trình là dạng `AICodeGen.exe` chạy ngay lập tức, cực kỳ di động và nhẹ gọn. Hoàn toàn vứt bỏ sự cần thiết cài đặt môi trường C++, Python hay bất cứ dòng command line rườm rà nào.
+## ✨ Tính năng nổi bật (Version 2.0)
+
+### 🤖 1. Phân tích & Sinh Test bằng AI (Sinh Test Tab)
+- **Hỗ trợ Ảnh & Clipboard**: Chỉ cần chụp ảnh đề bài (Win+Shift+S) và nhấn `Ctrl+V` để nạp vào phần mềm.
+- **AI Đỉnh cao (Gemini 1.5 Flash)**: Tự động phân tích logic, giới hạn bài toán và sinh code giải chuẩn xác.
+- **Tự động sinh Test Data**: Tạo bộ dữ liệu đầu vào `.in` và đầu ra `.out` phong phú, bao gồm cả các trường hợp biên (edge cases).
+- **Cơ chế Retry thông minh**: Tự động thử lại khi gặp lỗi giới hạn API (Quota 429), giúp quá trình sinh không bị gián đoạn.
+
+### 🌐 2. Tự động hóa Upload OJ (OJ & Đăng Bài Tab)
+- **Kết nối Trực tiếp ptcoding.edu.vn**: Tự động Đăng nhập -> Tạo bài mới -> Upload ZIP -> Ghép cặp (Apply).
+- **Phát hiện Ghi đè**: Tự động kiểm tra nếu bài đã tồn tại và hỏi ý kiến người dùng trước khi cập nhật.
+- **Tối ưu hóa Giao diện OJ**: 
+  - Nếu AI sinh ra mô tả văn bản, chương trình tự động xóa tệp đề bài cũ (ảnh/PDF) để tránh trùng lặp.
+  - Tự động điền Giới hạn thời gian (Time Limit) và bộ nhớ (Memory Limit).
+- **Theo dõi Tiến độ**: Log chi tiết từng bước (Login, Uploading, Polling, Applying).
+
+### 🛠 3. Các cải tiến Kỹ thuật Quan trọng
+- **Sửa lỗi ZIP Bloat**: Khắc phục triệt để lỗi nén đệ quy (từng gây ra file 2GB). File ZIP giờ đây chỉ nặng vài chục KB.
+- **Hỗ trợ Zip64**: Tương thích với các bộ test case lớn (dung lượng thực tế >4GB).
+- **Giao diện Hiện đại**: Sử dụng `customtkinter` mang lại trải nghiệm mượt mà, chuyên nghiệp.
+
+---
+
+## 🚀 Hướng dẫn Sử dụng (Quick Start)
+
+### 1. Cài đặt ban đầu
+- Tải bản phát hành tại thư mục `AICodeGen_Release/`.
+- Chạy file `AICodeGen.exe`.
+- Trong lần đầu sử dụng, phần mềm sẽ yêu cầu nhập **Gemini API Key** (Sẽ được lưu an toàn tại `~/.ai_cp_config.json`).
+
+### 2. Quy trình làm việc 3 bước
+1.  **Dán ảnh**: Chụp ảnh đề bài -> Nhấn `Ctrl+V` vào phần mềm.
+2.  **Sinh dữ liệu**: Nhấn **"Bắt đầu Sinh"**. Đợi AI hoàn tất code và test cases.
+3.  **Đăng bài**: Chọn "Có" khi được hỏi nộp bài lên OJ. Kiểm tra thông tin tại Tab 2 và nhấn **"ĐĂNG BÀI LÊN OJ"**.
+
+---
+
+## 📂 Cấu trúc Thư mục Kết quả
+Khi thực hiện sinh bài, kết quả được lưu tại:
+- `solutions/<mã_bài>/`: Chứa code giải `solution.cpp` và bộ test.
+- `solutions/<mã_bài>/<mã_bài>.zip`: File nén để nộp thủ công (nếu cần).
+
+---
+
+## ⚠️ Lưu ý
+- Đảm bảo tài khoản OJ có quyền tạo/chỉnh sửa bài toán.
+- Kiểm tra lại định dạng file `Time/Memory Limit` cho đúng với yêu cầu của từng trang OJ cụ thể.
 
 ## 📥 Hướng Dẫn Cài Đặt (Dành cho Người Dùng Phổ Thông)
 
